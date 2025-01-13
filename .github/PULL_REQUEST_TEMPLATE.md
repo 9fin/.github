@@ -5,11 +5,13 @@
 
 ## Nature of changes
 
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
-- [ ] Deployment update
+- [ ] `feat:` - New feature (non-breaking change which adds functionality)
+- [ ] `fix:` - Bug fix (non-breaking change which fixes an issue)
+- [ ] `docs:` - Documentation update
+- [ ] `ci:` - Deployment update
+- [ ] `!` - Breaking change (any of the above types, but a change that would cause existing functionality to not work as expected)
+
+Based on [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#examples)
 
 ## Description of changes
 
