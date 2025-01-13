@@ -19,7 +19,7 @@
 - [ ] I have performed a self-review of my code
 - [ ] If it is a core feature, I have added thorough tests.
 - [ ] New and existing unit tests pass locally with my changes
-- [ ] I have added the necessary observability elements to monitor for known edge case risks?
+- [ ] I have added the necessary observability elements to monitor for known edge case risks
 - [ ] Data & sensitive variable processing & validation follows security best practices & no sensitive information will leak into log messages
 
 ### Reviewing
