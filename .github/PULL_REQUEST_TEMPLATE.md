@@ -1,7 +1,10 @@
-## Links
-
-[Jira ticket](url)
-[Design document](url)
+<!--
+## Before creating a Pull Request, please ensure that you've:
+- 👀 Reviewed your code
+- 🧪 Added or updated necessary tests
+- 🔍 Included observability elements for known edge case risks
+- 📊 Applied correct metrics tracking for new features
+-->
 
 ## Nature of changes
 
@@ -11,31 +14,22 @@
 - [ ] `ci:` - Deployment update
 - [ ] `!` - Breaking change (any of the above types, but a change that would cause existing functionality to not work as expected)
 
-Based on [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#examples)
+<!-- Based on [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#examples) -->
 
 ## Description of changes
 
-<!-- Summarize the changes you've made in this PR. -->
+<!-- Provide a brief summary of the changes made in this PR. -->
 
-## QA
-- [ ] I have performed a self-review of my code
-- [ ] If it is a core feature, I have added thorough tests.
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] I have added the necessary observability elements to monitor for known edge case risks
-- [ ] Data & sensitive variable processing & validation follows security best practices & no sensitive information will leak into log messages
+## How to test
 
-### Reviewing
+<!-- Outline any specific areas for the reviewer to focus on. Include steps for testing the changes. -->
 
-<!-- What do you want the reviewer to look out for or pay special scrutiny to? -->
+## Screenshots
 
-### Screenshots
+<!-- If applicable, add screenshots to illustrate the changes
 
-<!-- Add screenshots to show the changes, if applicable. -->
-
+Example comparison table:
 | Before | After |
-|--------|-------|
+| ------ | ----- |
 | -      | -     |
-
-### How to test
-
-<!-- What steps should the reviewer take to test this PR? -->
+ -->
