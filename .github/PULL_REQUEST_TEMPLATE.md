@@ -11,7 +11,6 @@ Before you ask for review:
   each ship safely on their own, or say below why it can't be split.
 
 Sections marked (if applicable) can be deleted when they don't apply.
-Product Engineering Standards: https://app.notion.com/p/9fin/Product-Engineering-Standards-536cc47685cf4f1d9b77f1cd64e0997b
 -->
 
 ## What and why
@@ -32,17 +31,14 @@ or returns something unexpected: fail fast, retry, degrade, or surface an error?
 ## Testing
 
 <!--
-- What the automated tests cover. Unit tests should cover the changed behaviour and
-  its key edge cases, and assert behaviour rather than implementation.
-- Why any integration test is needed (queries, migrations, wiring, boundaries).
-- API boundary changes: which contract tests cover the request/response shape.
+What the automated tests cover. Unit tests should cover the changed behaviour and
+its key edge cases, and assert behaviour rather than implementation.
 -->
 
 ### How to test
 
 <!--
 Steps for a reviewer to verify the change locally or on the review app.
-Review app: <link>
 -->
 
 ### Screenshots or video (if applicable)
@@ -54,17 +50,6 @@ For UI changes, add screenshots or a short video.
 | ------ | ----- |
 | -      | -     |
 -->
-
-### Test exception (if applicable)
-
-<!--
-Only when unit tests are genuinely impractical right now (hotfix, incident response).
-Delete this section otherwise.
--->
-
-- Why tests aren't included:
-- Follow-up ticket to add a seam and tests:
-- [ ] A reviewer has explicitly signed off on this exception
 
 ## Rollout and rollback
 
