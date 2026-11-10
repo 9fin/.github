@@ -5,7 +5,7 @@ See https://www.conventionalcommits.org/en/v1.0.0/#examples
 Tick what applies and delete what doesn't. Sections marked (if applicable) can go.
 -->
 
-## Before review
+## Before ready for review
 
 - [ ] Formatting, lint, type checks and the relevant fast tests pass locally or in CI
 - [ ] I can explain the change, how it behaves and how it fails. AI-assisted is fine, but I own it, this description included
