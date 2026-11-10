@@ -2,79 +2,78 @@
 Title: start with a conventional commit prefix (feat:, fix:, chore: ...).
 See https://www.conventionalcommits.org/en/v1.0.0/#examples
 
-Before you ask for review:
-- Formatting, lint, type checks and the relevant fast tests pass locally or in CI.
-  Reviewers shouldn't spend time on things the tooling catches.
-- You can explain the change, how it behaves and how it fails. AI-assisted work is
-  fine, but you own the result, including this description.
-- The diff is under ~400 changed lines. If it isn't, split it into stacked PRs that
-  each ship safely on their own, or say below why it can't be split.
-
-Sections marked (if applicable) can be deleted when they don't apply.
+Tick what applies and delete what doesn't. Sections marked (if applicable) can go.
 -->
+
+## Before review
+
+- [ ] Formatting, lint, type checks and the relevant fast tests pass locally or in CI
+- [ ] I can explain the change, how it behaves and how it fails. AI-assisted is fine, but I own it, this description included
+- [ ] The diff is under ~400 changed lines, or it's split into stacked PRs, or I've said below why it can't be split
 
 ## What and why
 
-<!--
-What changes and why. Link the ticket and any design doc.
-Describe the user-visible or system behaviour that changes.
-If this is part of a stack, link the PR it builds on.
--->
+Ticket: <!-- e.g. ENG-123 -->
+
+<!-- What changes, why, and which user-visible or system behaviour moves. Link any design doc. -->
 
 ## Edge cases and failure modes
 
-<!--
-Which edge cases did you consider? What happens when a dependency is slow, down,
-or returns something unexpected: fail fast, retry, degrade, or surface an error?
--->
+- [ ] I've listed the edge cases I considered
+- [ ] I've said what happens when a dependency is slow, down or returns junk: fail fast, retry, degrade, or surface an error
+
+<!-- Notes -->
 
 ## Testing
 
-<!--
-What the automated tests cover. Unit tests should cover the changed behaviour and
-its key edge cases, and assert behaviour rather than implementation.
--->
+- [ ] Unit tests cover the changed behaviour and its main edge cases
+- [ ] Tests assert behaviour, not implementation
+- [ ] Integration tests cover any query, migration or service boundary change
 
 ### How to test
 
-<!--
-Steps for a reviewer to verify the change locally or on the review app.
--->
+<!-- Steps for a reviewer to check this locally or on the review app. -->
 
 ### Screenshots or video (if applicable)
 
 <!--
-For UI changes, add screenshots or a short video.
-
 | Before | After |
 | ------ | ----- |
 | -      | -     |
 -->
 
-## Rollout and rollback
+## Rollout
 
-<!--
-- Blast radius: who or what is affected if this goes wrong?
-- Rollout: feature flag, staged rollout, or straight deploy?
-- Rollback: how do we undo it, and is anything not safely reversible?
-- Data changes (migrations, backfills, schema): compatible with the code already
-  running, and can it be reversed?
-- Staging: what you validated there, and any difference from production that matters.
--->
+- [ ] Blast radius: I've noted who or what is hit if this goes wrong
+- [ ] Rollout method: feature flag, staged rollout, or straight deploy
+- [ ] Staging: I've said what I checked there and any difference from production that matters
+
+<!-- Notes -->
+
+## Rollback
+
+- [ ] I've written how to undo this (revert, flag off, something else)
+- [ ] Anything that can't be safely reversed is called out
+- [ ] Data changes (migrations, backfills, schema) work with the code already running and can be reversed
+
+<!-- Notes -->
 
 ## What to watch
 
-<!--
-Metrics, logs, traces, alerts and user impact to watch during rollout, and what
-"bad" looks like.
--->
+- [ ] I've listed the metrics, logs, traces or alerts to watch during rollout, and what "bad" looks like
+
+<!-- Notes -->
 
 ## Post-deploy smoke test
 
 <!--
-The check that proves the user-visible or system-critical path still works after
-deploy. Automated or manual. Required for any non-trivial production change.
+Needed when the change can affect production behaviour: application code, config,
+infra, dependencies, migrations. Skip it for docs, comments, test-only and dev
+tooling changes, and tick the last box instead.
 -->
+
+- [ ] I've written the check that proves the user-visible or system-critical path still works after deploy (automated or manual)
+- [ ] Not needed: this PR can't change production behaviour
 
 ## Observability and reliability (if applicable)
 
