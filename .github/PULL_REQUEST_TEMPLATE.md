@@ -2,12 +2,12 @@
 Title: start with a conventional commit prefix (feat:, fix:, chore: ...).
 See https://www.conventionalcommits.org/en/v1.0.0/#examples
 
-Tick what applies and delete what doesn't. Sections marked (if applicable) can go.
+This template is a guide, not a form: skip what doesn't apply.
+Write for a human reviewer, not a machine, and keep descriptions short.
 -->
 
 ## Before ready for review
 
-- [ ] Formatting, lint, type checks and the relevant fast tests pass locally or in CI
 - [ ] I can explain the change, how it behaves and how it fails. AI-assisted is fine, but I own it, this description included
 - [ ] The diff is under ~400 changed lines, or it's split into stacked PRs, or I've said below why it can't be split
 
@@ -15,7 +15,15 @@ Tick what applies and delete what doesn't. Sections marked (if applicable) can g
 
 Ticket: <!-- e.g. ENG-123 -->
 
-<!-- What changes, why, and which user-visible or system behaviour moves. Link any design doc. -->
+<!--
+What changes, why, and which user-visible or system behaviour moves. Link any design doc.
+Write the what and why by hand above the details block. Put any generated detail inside it.
+-->
+
+<details>
+<summary>AI-generated summary (optional)</summary>
+
+</details>
 
 ## Edge cases and failure modes
 
@@ -58,12 +66,6 @@ Ticket: <!-- e.g. ENG-123 -->
 
 <!-- Notes -->
 
-## What to watch
-
-- [ ] I've listed the metrics, logs, traces or alerts to watch during rollout, and what "bad" looks like
-
-<!-- Notes -->
-
 ## Post-deploy smoke test
 
 <!--
@@ -75,11 +77,12 @@ tooling changes, and tick the last box instead.
 - [ ] I've written the check that proves the user-visible or system-critical path still works after deploy (automated or manual)
 - [ ] Not needed: this PR can't change production behaviour
 
-## Observability and reliability (if applicable)
+## Observability and reliability
 
-<!-- For PRs that add or change calls to other services, event handlers or jobs. -->
+- [ ] I've listed the metrics, logs, traces or alerts to watch during rollout, and what "bad" looks like
+
+<!-- The rest is for PRs that add or change calls to other services, event handlers or jobs. -->
 
 - [ ] Downstream calls emit metrics and traces: which dependency, how often it fails, how long it takes, and what triggered the call
 - [ ] Correlation IDs propagate across service boundaries, and event-driven flows record causation where useful
 - [ ] Event handlers are idempotent with bounded, observable retries, or this PR explains why not
-- [ ] Dead-letter / poison-message behaviour is understood for critical flows
